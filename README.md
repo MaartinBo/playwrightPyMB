@@ -5,6 +5,7 @@
 - [Getting Started](#getting-started)
 - [Setting Up a Virtual Environment](#setting-up-a-virtual-environment)
 - [Installing Dependencies](#installing-dependencies)
+- [Visual Studio Code Setup](#visual-studio-code-setup)
 - [Code Formatting](#code-formatting)
 - [Code Linting](#code-linting)
 - [Pre-commit Hooks](#pre-commit-hooks)
@@ -91,6 +92,34 @@ To format the code run:
 ```bash
 black  .
 ```
+
+## Visual Studio Code Setup
+
+Recommended extensions and settings are provided in the `.vscode` folder for an optimal development experience.
+
+### Recommended Extensions
+
+- **Python** (`ms-python.python`)
+- **Pylance** (`ms-python.vscode-pylance`)
+- **Playwright Test for VSCode** (`ms-playwright.playwright`)
+- **Code Spell Checker** (`streetsidesoftware.code-spell-checker`)
+- **Isort** (`ms-python.isort`) - for organizing imports
+- **Black Formatter** (`ms-python.black-formatter`) - for consistent code formatting
+
+### Settings
+
+- **Formatting**: Code is automatically formatted on save using Black via the `ms-python.black-formatter` extension.
+- **Organizing Imports**: Imports are automatically organized on save using `isort`, configured to follow Black's style for consistency.
+- **Linting**: Flake8 is enabled for linting Python code, providing immediate feedback on code style and syntax issues.
+- **Testing**: Pytest is configured as the default test framework, and tests are expected to be located in the `tests` directory.
+- **Type Checking**: Pylance is set up with basic type checking (`typeCheckingMode: "basic"`) to help maintain code quality and identify potential issues early.
+- **Spell Check**: The Code Spell Checker is configured to recognize specific terms, such as `pytestmark`, to avoid unnecessary spell check warnings on domain-specific terms.
+
+### Additional Configuration Details
+
+- **Python Interpreter**: The Python interpreter path is set to `env/bin/python`, assuming a virtual environment located in the `env` folder.
+- **File Exclusion**: Commonly generated cache files and directories, such as `__pycache__` and `.pytest_cache`, are excluded from the file watcher to improve performance and reduce clutter.
+- **Organizing Imports on Save**: The setting `editor.codeActionsOnSave.source.organizeImports` is configured as `"explicit"`, ensuring that imports are organized whenever files are saved.
 
 ## Code Linting
 
