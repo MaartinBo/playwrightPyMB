@@ -7,6 +7,7 @@
 - [Installing Dependencies](#installing-dependencies)
 - [Code Formatting](#code-formatting)
 - [Code Linting](#code-linting)
+- [Pre-commit Hooks](#pre-commit-hooks)
 
 ## Getting Started
 
@@ -102,3 +103,27 @@ To run the linter use:
 ```bash
 flake8
 ```
+
+## Pre-commit Hooks
+
+I use pre-commit to automate code formatting and linting.
+
+### Installing Pre-commit Hooks
+
+To set up pre-commit hooks for this project, run:
+
+```bash
+pre-commit install
+```
+
+### Running Pre-commit Hooks Manually
+
+To run all hooks against all files:
+
+```bash
+pre-commit run --all-files
+```
+
+Expected result:
+
+![alt text](image.png)
