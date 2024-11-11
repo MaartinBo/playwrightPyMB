@@ -75,24 +75,6 @@ With the virtual environment activated, install the required packages by running
 pip install -r requirements.txt
 ```
 
-## Code Formatting
-
-I use **Black** for code formatting.
-
-The configuration is stored in `pyproject.toml`
-
-To launch black in "check" mode run:
-
-```bash
-black --check .
-```
-
-To format the code run:
-
-```bash
-black  .
-```
-
 ## Visual Studio Code Setup
 
 Recommended extensions and settings are provided in the `.vscode` folder for an optimal development experience.
@@ -120,6 +102,24 @@ Recommended extensions and settings are provided in the `.vscode` folder for an 
 - **Python Interpreter**: The Python interpreter path is set to `env/bin/python`, assuming a virtual environment located in the `env` folder.
 - **File Exclusion**: Commonly generated cache files and directories, such as `__pycache__` and `.pytest_cache`, are excluded from the file watcher to improve performance and reduce clutter.
 - **Organizing Imports on Save**: The setting `editor.codeActionsOnSave.source.organizeImports` is configured as `"explicit"`, ensuring that imports are organized whenever files are saved.
+
+## Code Formatting
+
+I use **Black** for code formatting.
+
+The configuration is stored in `pyproject.toml`
+
+To launch black in "check" mode run:
+
+```bash
+black --check .
+```
+
+To format the code run:
+
+```bash
+black  .
+```
 
 ## Code Linting
 
