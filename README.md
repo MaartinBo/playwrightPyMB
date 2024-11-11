@@ -5,7 +5,7 @@
 - [Getting Started](#getting-started)
 - [Setting Up a Virtual Environment](#setting-up-a-virtual-environment)
 - [Installing Dependencies](#installing-dependencies)
-
+- [Code Linting](#code-linting)
 
 ## Getting Started
 
@@ -70,4 +70,16 @@ With the virtual environment activated, install the required packages by running
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Code Linting
+
+I use **Flake8** for linting to maintain code quality.
+
+The configuration is stored in `pyproject.toml` using the `flake8-pyproject` plugin.
+
+To run the linter use:
+
+```bash
+flake8
 ```
