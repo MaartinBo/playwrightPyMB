@@ -1,3 +1,27 @@
+[tool.black]
+line-length = 120
+target-version = ["py37"]
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | env
+  | venv
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.tox
+  | \.eggs
+  | \.idea
+  | \.vscode
+  | \.history
+  | \.ipynb_checkpoints
+  | dist
+  | build
+  | __pycache__
+)/
+'''
+
+
 [tool.flake8]
 max-line-length = 120
 exclude = [

@@ -5,6 +5,7 @@
 - [Getting Started](#getting-started)
 - [Setting Up a Virtual Environment](#setting-up-a-virtual-environment)
 - [Installing Dependencies](#installing-dependencies)
+- [Code Formatting](#code-formatting)
 - [Code Linting](#code-linting)
 
 ## Getting Started
@@ -70,6 +71,24 @@ With the virtual environment activated, install the required packages by running
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Code Formatting
+
+I use **Black** for code formatting.
+
+The configuration is stored in `pyproject.toml`
+
+To launch black in "check" mode run:
+
+```bash
+black --check .
+```
+
+To format the code run:
+
+```bash
+black  .
 ```
 
 ## Code Linting
